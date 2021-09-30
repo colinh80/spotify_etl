@@ -1,2 +1,3 @@
 # spotify_etl
-An ETL Project where I automate the process of extracting recently played tracks from the Spotify API, transforming, and loading into a local Postgres SQL database using Python. The script is then scheduled using Apache Airflow.
+
+This is an Python ETL Project where I extract my recently played tracks from Spotify API and model the data into a simple dimensional star schema stored on a local PostgreSQL database. I scheduled the process with Apache Airflow to run once daily.
