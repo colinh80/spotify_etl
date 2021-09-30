@@ -18,6 +18,9 @@ The code for the Extraction and Transform stages can be seen in the [spotify_etl
 
 I created a database on my local machine using PostgreSQL to store the data in a schema titled 'spotify_schema'. The SQL code for creating these tables can be seen [here](https://github.com/colinjhicks/spotify_etl/blob/main/sql/create_tables.sql). I used Psycopg2 for my engine and the pandas method to_sql() to load the data. Each dataframe is loaded into a temporary table, then joined with the main database under the condition that there are no matching primary keys. The code for this stage is found in the [spotify_etl](https://github.com/colinjhicks/spotify_etl/blob/main/python/spotify_etl.py) file. Below I have a visual of my database schema.
 
+![spotify_etl_schema](https://user-images.githubusercontent.com/80708120/135541203-fab61e9c-13fd-4581-93fa-a709c0a185d5.jpg)
+
+
 # Schedule: Apache Airflow
 
 I utilized Apache Airflow to create a DAG to schedule the data pipeline for a 24 hour cycle. The corresponding code can be seen [here](https://github.com/colinjhicks/spotify_etl/blob/main/dags/spotify_dag.py).
