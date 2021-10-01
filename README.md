@@ -4,7 +4,7 @@ This is a Python project where I build an ETL pipeline for extracting data consi
 
 # Extraction: Spotify API
 
-I extracted data out of the Spotify API using this [endpoint](https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recently-played) under the scope 'user-read-recently-played'. The API has a limit of 50 tracks, which was acceptable for my own listening habits. Although I include a warning in the validation stage if the limit was reached to indicate some played tracks have been lost. In that case, one would need schedule the ETL at a higher frequency than once a day. The data extracted is parsed through and appended to lists, which are then collected into dictionaries and finally Pandas dataframes. The result is 3 dataframes, which in turn will become a fact table (recently_played_tracks) and two dimension tables (spotify_albums and spotify_artists).
+I extracted data out of the Spotify API using this [endpoint](https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recently-played) under the scope 'user-read-recently-played'. The API has a limit of 50 tracks, which was acceptable for my own listening habits. Although I include a warning in the validation stage if the limit was reached to indicate some played tracks have been lost. In that case, one would need to schedule the ETL at a higher frequency than once a day. The data extracted is parsed through and appended to lists, which are then collected into dictionaries and finally Pandas dataframes. The result is 3 dataframes, which in turn will become a fact table (recently_played_tracks) and two dimension tables (spotify_albums and spotify_artists).
 
 # Transform: Python and Pandas
 
